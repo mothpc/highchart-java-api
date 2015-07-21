@@ -26,7 +26,7 @@ public class Axis
     }
     
     private ArrayString categories;
-    
+
     private DateTimeLabelFormats dateTimeLabelFormats;
     
     private String gridLineColor;
@@ -73,6 +73,8 @@ public class Axis
     
     private String type;
 
+    private String id;
+
     public Axis() { }
     
     @Override
@@ -105,6 +107,7 @@ public class Axis
         this.minTickInterval = src.minTickInterval;
         Utils.style(this.title, src.title);
         this.type = src.type;
+        this.id = src.id;
         return this;
     }
 
@@ -167,6 +170,10 @@ public class Axis
         return type;
     }
 
+    public String getId() {
+        return id;
+    }
+
     public Axis setMax(Double max) {
         this.max = max;
         return this;
@@ -189,6 +196,11 @@ public class Axis
 
     public Axis setType(Type type) {
         this.type = EnumString.toString(type).toLowerCase();
+        return this;
+    }
+
+    public Axis setId(String id) {
+        this.id = id;
         return this;
     }
     
