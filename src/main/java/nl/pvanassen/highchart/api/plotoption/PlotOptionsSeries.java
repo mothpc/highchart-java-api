@@ -97,6 +97,8 @@ public class PlotOptionsSeries
     private Boolean trackByArea;
 
     private Boolean visible;
+
+    private Integer turboThreshold;
     
     @Override
     public PlotOptionsSeries style(
@@ -146,6 +148,7 @@ public class PlotOptionsSeries
         this.threshold = src.threshold;
         this.trackByArea = src.trackByArea;
         this.visible = src.visible;
+        this.turboThreshold = src.turboThreshold;
         return this;
     }
 
@@ -818,6 +821,22 @@ public class PlotOptionsSeries
      */
     public PlotOptionsSeries setTrackByArea(Boolean trackByArea) {
         this.trackByArea = trackByArea;
+        return this;
+    }
+
+    /**
+     * @return the turboThreshold
+     */
+    public Integer getTurboThreshold() {
+        return turboThreshold;
+    }
+
+    /**.
+     * @param turboThreshold the turboThreshold to set
+     * @return
+     */
+    public PlotOptionsSeries setTurboThreshold(Integer turboThreshold) {
+        this.turboThreshold = turboThreshold;
         return this;
     }
 }
