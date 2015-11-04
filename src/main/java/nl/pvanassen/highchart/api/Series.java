@@ -5,8 +5,7 @@ import nl.pvanassen.highchart.api.shared.SeriesType;
 import nl.pvanassen.highchart.api.utils.JsonArray;
 import nl.pvanassen.highchart.api.utils.Utils;
 
-public class Series 
-    extends     PlotOptionsSeries {
+public class Series extends PlotOptionsSeries {
     
     private JsonArray<Point> data;
     
@@ -24,8 +23,7 @@ public class Series
     
     private Integer zIndex;
     
-    public Series style(
-            final Series src) {
+    public Series style(final Series src) {
         super.style(src);
         
         if(src == null) {

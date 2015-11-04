@@ -23,8 +23,7 @@ import nl.pvanassen.highchart.api.shared.Styleable;
  * @author shaun.lefeuvre
  */
 public class Utils {
-    public static boolean isAnyNull(
-            final Object...objects) {
+    public static boolean isAnyNull(final Object...objects) {
         for(final Object t:objects) {
             if(t == null) {
                 return true;
@@ -33,20 +32,15 @@ public class Utils {
         return false;
     }
     
-    public static <T extends Styleable> void style(
-            final T target, 
-            final T src) {
+    public static <T extends Styleable> void style(final T target, final T src) {
         if(!isAnyNull(target, src)) {
             target.style(src);
         }
     }
     
-    public static <T extends Styleable> void styleArray(
-            final JsonArray<T> target,
-            final JsonArray<T> src) {
+    public static <T extends Styleable> void styleArray(final JsonArray<T> target, final JsonArray<T> src) {
         if(!isAnyNull(target, src)) {
-            for(int i = 0; i < Math.min(
-                    target.size(), src.size()); i++) {
+            for(int i = 0; i < Math.min(target.size(), src.size()); i++) {
                 style(target.get(i), src.get(i));
             } 
         }
@@ -56,8 +50,7 @@ public class Utils {
             final JsonArray<T> target, 
             final JsonArray<T> src) {
         if(!isAnyNull(target, src)) {
-            for(int i = 0; i < Math.min(
-                    target.size(), src.size()); i++) {
+            for(int i = 0; i < Math.min(target.size(), src.size()); i++) {
                 target.set(i, src.get(i));
             }
         }

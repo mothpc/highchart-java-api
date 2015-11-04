@@ -12,6 +12,8 @@ public class PlotStatesSelect extends BaseObject {
     private String color;
 
     private String borderColor;
+    
+    private Integer lineWidth;
 
     @XmlElement
     private Integer borderWidth;
@@ -27,6 +29,10 @@ public class PlotStatesSelect extends BaseObject {
     public String getColor() {
         return color;
     }
+    
+    public Integer getLineWidth() {
+    	return lineWidth;
+    }
 
     public PlotStatesSelect setBorderColor(String borderColor) {
         this.borderColor = borderColor;
@@ -41,6 +47,11 @@ public class PlotStatesSelect extends BaseObject {
     public PlotStatesSelect setColor(String color) {
         this.color = color;
         return this;
+    }
+    
+    public PlotStatesSelect setLineWidth(Integer lineWidth) {
+    	this.lineWidth = lineWidth;
+    	return this;
     }
 
 }

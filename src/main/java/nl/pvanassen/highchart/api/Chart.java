@@ -22,6 +22,8 @@ public class Chart extends BaseObject {
     private Integer marginLeft;
 
     private Integer marginTop;
+    
+    private String type;
 
     public String getBackgroundColor() {
         return backgroundColor;
@@ -29,6 +31,10 @@ public class Chart extends BaseObject {
 
     public String getDefaultSeriesType() {
         return defaultSeriesType;
+    }
+    
+    public String getType() {
+    	return type;
     }
 
     public int getHeight() {
@@ -67,6 +73,11 @@ public class Chart extends BaseObject {
     public Chart setDefaultSeriesType(SeriesType type) {
         defaultSeriesType = type.name().toLowerCase();
         return this;
+    }
+    
+    public Chart setType(SeriesType type) {
+    	this.type = type.name().toLowerCase();
+    	return this;
     }
 
     public Chart setHeight(int height) {
